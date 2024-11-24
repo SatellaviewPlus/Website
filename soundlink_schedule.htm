@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        // Construct the new URL without "/Website/"
+        var newPath = window.location.pathname.replace('/Website/', '/');
+        var newUrl = window.location.origin + newPath + window.location.search + window.location.hash;
+        window.location.href = newUrl;
+    </script>
+</head>
+<body>
+    <p>If you are not redirected automatically, <a id="redirect-link">click here</a>.</p>
+    <script>
+        // Update the link in the body in case JavaScript is disabled
+        var newPath = window.location.pathname.replace('/Website/', '/');
+        var newUrl = window.location.origin + newPath + window.location.search + window.location.hash;
+        document.getElementById('redirect-link').href = newUrl;
+    </script>
+</body>
+</html>
